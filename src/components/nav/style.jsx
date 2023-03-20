@@ -56,5 +56,7 @@ export const Input = styled.input`
   border: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   padding: 7px 10px;
 `;

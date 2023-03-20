@@ -31,7 +31,7 @@ const MovieSlider = ({ movie, showLink = true }) => {
       modules={[Pagination]}
       className="mySwiper"
     >
-      {movie.length > 0 &&
+      {movie &&
         movie.map((e) => (
           <SwiperSlide key={e.id}>
             <DivInfo>
@@ -40,7 +40,7 @@ const MovieSlider = ({ movie, showLink = true }) => {
                 alt={e.title}
               />
 
-              <Title>{e.title}</Title>
+              <Title>{e.title ? e.title : 'Sem título' }</Title>
 
               <Info>
                 <FaStar /> {e.vote_average}
