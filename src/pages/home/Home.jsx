@@ -22,7 +22,7 @@ export const Home = () => {
   const baseTrending = `${trending}?${apiKey}`;
 
   const topRateMovies = (url) => {
-    setInterval(() => {
+    setTimeout(() => {
       axios
         .get(url)
         .then((e) => {

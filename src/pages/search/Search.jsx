@@ -20,8 +20,8 @@ export const Search = () => {
 
   const queryUrl = `${searchURL}?${apiKey}&query=${query}`;
 
-  const getSearchMovies = async (url) => {
-    setInterval(() => {
+  const getSearchMovies = (url) => {
+    setTimeout(() => {
       axios
         .get(url)
         .then((e) => {
@@ -35,7 +35,7 @@ export const Search = () => {
   };
 
   useEffect(() => {
-    getSearchMovies(queryUrl);
+    getSearchMovies(queryUrl)
   }, [query]);
 
   return (

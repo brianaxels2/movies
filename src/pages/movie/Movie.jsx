@@ -23,7 +23,7 @@ export const Movie = () => {
   const { id } = useParams();
 
   const getMovie = (url) => {
-    setInterval(() => {
+    setTimeout(() => {
       axios
         .get(url)
         .then((e) => {
